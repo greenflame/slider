@@ -1,0 +1,595 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"g",
+				"getElementById"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"sessio",
+				"session_start"
+			],
+			[
+				"shot",
+				"SHOT_TIME"
+			],
+			[
+				"sta",
+				"STABILIZATION_TIME"
+			],
+			[
+				"scri",
+				"script"
+			],
+			[
+				"axi",
+				"axis1_expr"
+			],
+			[
+				"expr",
+				"expr_copy"
+			],
+			[
+				"Previ",
+				"prev_time"
+			],
+			[
+				"mo",
+				"move_time"
+			],
+			[
+				"pre",
+				"prev_time"
+			],
+			[
+				"STO",
+				"SHOT_TIME"
+			],
+			[
+				"Ax",
+				"AXIS1_STEPS_PER_SECOND"
+			],
+			[
+				"cur",
+				"cur_axis1"
+			],
+			[
+				"AXIS1_STEPS_PER_",
+				"AXIS1_STEPS_PER_METER"
+			],
+			[
+				"ste",
+				"AXIS1_STEPS_PER_SECOND"
+			],
+			[
+				"start",
+				"start_time"
+			],
+			[
+				"moto",
+				"MOTO_LINE"
+			],
+			[
+				"ticks",
+				"TICKS_PER_SECOND"
+			],
+			[
+				"tick",
+				"TICKS_PER_SECOND"
+			],
+			[
+				"ax",
+				"axis1_start_point"
+			],
+			[
+				"parse",
+				"parse_add"
+			],
+			[
+				"camera",
+				"camera_shoot"
+			],
+			[
+				"ch",
+				"chVTGetSystemTime"
+			],
+			[
+				"arg",
+				"argv"
+			],
+			[
+				"cmd_mo",
+				"cmd_mount"
+			],
+			[
+				"TL",
+				"TL_CMD_READY"
+			],
+			[
+				"tls",
+				"tlShoots"
+			],
+			[
+				"tl_c",
+				"TL_CMD_1"
+			],
+			[
+				"tl",
+				"tlCmd"
+			],
+			[
+				"TL_CM",
+				"TL_CMD_0"
+			],
+			[
+				"ar",
+				"argc"
+			],
+			[
+				"motoS",
+				"motoStop"
+			],
+			[
+				"in",
+				"inc	#include \"…\""
+			],
+			[
+				"mtrSp",
+				"mtrSpeed"
+			],
+			[
+				"ST",
+				"STATE_MTR_STOP"
+			],
+			[
+				"mtr",
+				"mtrState"
+			],
+			[
+				"mt",
+				"mtrState"
+			],
+			[
+				"st",
+				"stab"
+			],
+			[
+				"per",
+				"period"
+			],
+			[
+				"sh",
+				"shooting"
+			],
+			[
+				"pe",
+				"periodShutter"
+			],
+			[
+				"L",
+				"LED_FLASH_PAUSE"
+			],
+			[
+				"DE",
+				"DEF_SHUT_PAUSE"
+			],
+			[
+				"HRG_SH",
+				"HRG_SHUT_PAUSE"
+			],
+			[
+				"IR",
+				"IRG_HV"
+			],
+			[
+				"REG_SM_S",
+				"REG_SM_SPEED"
+			],
+			[
+				"REG_SM_ST",
+				"REG_SM_STEPS"
+			],
+			[
+				"msgG",
+				"msgGetResp"
+			],
+			[
+				"REG_S",
+				"REG_SM_CMD"
+			],
+			[
+				"RE",
+				"REG_SHUT_STATE"
+			],
+			[
+				"cm",
+				"cmd_sm"
+			],
+			[
+				"ui",
+				"uint16_t"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"MsgU",
+				"tagMsgUint16"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"MsgSetS",
+				"MsgSetSteps"
+			],
+			[
+				"c",
+				"crc"
+			],
+			[
+				"Ms",
+				"MsgSetPause"
+			],
+			[
+				"pri",
+				"printf	printf …"
+			]
+		]
+	},
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Serge.SCRED/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Serge.SCRED/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/Projects/Slider/firmware/moto.c",
+		"/D/SDK/ChibiOS_3_0_3/os/various/shell.h",
+		"/G/http/ask/anton's projects/chat/get_messages.php",
+		"/G/http/ask/anton's projects/chat/get_messages_site.php",
+		"/G/http/ask/anton's projects/myparty/test.php",
+		"/G/http/ask/anton's projects/myparty/style.css",
+		"/G/http/ask/anton's projects/chat/post_messages.php",
+		"/G/http/ask/anton's projects/myparty/config.php",
+		"/G/http/ask/anton's projects/myparty/send.php",
+		"/G/http/ask/anton's projects/myparty/index.php",
+		"/G/http/ask/anton's projects/chat/get_user.php",
+		"/D/Projects/Slider/firmware/scripts.h",
+		"/D/Projects/Slider/firmware/Makefile",
+		"/D/Projects/Slider/firmware/camera.c",
+		"/D/Projects/Slider/firmware/camera.h",
+		"/D/Projects/Slider/firmware/scripts.c",
+		"/G/scripts.c",
+		"/D/Projects/Slider/firmware/halconf.h",
+		"/D/Projects/Slider/firmware/board.c",
+		"/D/SDK/ChibiOS_2_6_7/boards/OLIMEX_STM32_P103/board.h",
+		"/D/SDK/ChibiOS_2_6_7/demos/ARMCM3-STM32F103-FATFS/mcuconf.h",
+		"/D/Projects/Slider/firmware/mcuconf.h",
+		"/D/SDK/ChibiOS_2_6_7/demos/ARMCM3-STM32F103-FATFS/main.c",
+		"/D/SDK/ChibiOS_3_0_3/demos/STM32/RT-STM32F407-OLIMEX_E407-LWIP-FATFS-USB/main.c",
+		"/D/Projects/Slider/firmware/ffconf.h",
+		"/D/SDK/ChibiOS_3_0_3/demos/STM32/RT-STM32F407-OLIMEX_E407-LWIP-FATFS-USB/ffconf.h",
+		"/D/SDK/ChibiOS_2_6_7/demos/ARMCM3-STM32F107-FATFS/ffconf.h",
+		"/D/SDK/ChibiOS_2_6_7/boards/OLIMEX_STM32_P103/board.c",
+		"/D/SDK/ChibiOS_2_6_7/demos/ARMCM3-STM32F103-FATFS/Makefile",
+		"/D/Projects/Slider/firmware/chconf.h",
+		"/D/Projects/Slider/firmware/moto.h",
+		"/D/Projects/Slider/firmware/LCD5110_Lib_Ifalt32-2.0/font.h",
+		"/D/Projects/Slider/firmware/LCD5110_Lib_Ifalt32-2.0/LCD.c",
+		"/D/Projects/Slider/firmware/board.h",
+		"/D/Projects/Slider/firmware/main.c",
+		"/D/Projects/Slider/firmware/LCD5110_Lib_Ifalt32-2.0/LCD.h",
+		"/D/Projects/IasPortal/src/index.php",
+		"/D/Projects/IasPortal/src/exit.php",
+		"/D/Projects/IasPortal/src/login.php",
+		"/D/Projects/IasPortal/src/usercheck.php",
+		"/D/Projects/IasPortal/src/settings/settings_tank.html",
+		"/D/Projects/IasPortal/src/reports/087_bunker_duts.htm",
+		"/D/SDK/ChibiOS_3_0_3/os/nil/templates/nilconf.h",
+		"/D/Projects/Slider/cnc/Подшипник скольжения грань.ngc",
+		"/D/Projects/Steadycam/soft/EvvGC-PLUS/EvvGC-PLUS-master/Firmware/evvgc-plus/main.c",
+		"/D/SDK/ChibiOS_3_0_3/test/rt/test.mk",
+		"/D/HProjects/Slider/firmware/Makefile",
+		"/D/SDK/ChibiOS_3_0_3/os/common/ports/ARM/compilers/GCC/vectors.s",
+		"/D/HProjects/Slider/firmware/halconf.h",
+		"//192.168.0.1/Папка обмена главный/КОНСТРУКТОРСКИЙ ОТДЕЛ/Проекты/КДК ''Портал-Дон-02''/Аншип/213 - Теплоход проекта 04983/Теплоход ''Посейдон''/Настройки/Настройки центрального контроллера/04983.arct",
+		"//192.168.0.1/Папка обмена главный/КОНСТРУКТОРСКИЙ ОТДЕЛ/Проекты/КДК ''Портал-Дон-02''/Аншип/213 - Теплоход проекта 04983/Теплоход ''Посейдон''/Настройки/Настройки центрального контроллера/04983.mbs",
+		"//192.168.0.1/Папка обмена главный/КОНСТРУКТОРСКИЙ ОТДЕЛ/Проекты/КДК ''Портал-Дон-02''/Аншип/212 - Теплоход ''Протей''/Документация/Настройки/Настройки центрального контроллера/protey.arct",
+		"//192.168.0.1/Папка обмена главный/КОНСТРУКТОРСКИЙ ОТДЕЛ/Проекты/КДК ''Портал-Дон-02''/Аншип/212 - Теплоход ''Протей''/Документация/Настройки/Настройки центрального контроллера/protey.mbs",
+		"/D/SDK/ChibiOS_3_0_3/demos/STM32/RT-STM32F103_INEMO_DISCOVERY/Makefile",
+		"/D/SDK/ChibiOS_3_0_3/demos/STM32/RT-STM32F103_INEMO_DISCOVERY/halconf.h",
+		"/D/HProjects/TimeLapse/firmware/stand-alone/timelapser/Makefile",
+		"/D/HProjects/TimeLapse/firmware/stand-alone/timelapser/halconf.h",
+		"/C/Users/Scred/AppData/Local/Temp/_tc/ChibiOS_3.0.2/demos/STM32/RT-STM32F103-MAPLEMINI/Makefile",
+		"/D/HProjects/TimeLapse/firmware/stand-alone/timelapser/usbcfg.c",
+		"/C/Users/Scred/AppData/Local/Temp/_tc/ChibiOS_3.0.2/demos/STM32/RT-STM32F103-MAPLEMINI/usbcfg.h",
+		"/C/Users/Scred/AppData/Local/Temp/_tc/ChibiOS_3.0.2/demos/STM32/RT-STM32F103-MAPLEMINI/main.c",
+		"/C/Users/Scred/AppData/Local/Temp/_tc/ChibiOS_3.0.2/demos/STM32/RT-STM32F103-OLIMEX_STM32_P103/main.c",
+		"/D/HProjects/TimeLapse/firmware/stand-alone/timelapser/chconf.h",
+		"//192.168.0.1/папка обмена главный/КОНСТРУКТОРСКИЙ ОТДЕЛ/Проекты/КДК ''Портал-Дон-02''/Енисейское речное пароходство/206 - Теплоход ''Капитан Лобастов'' проект 428.1/Настройки/Настройки центрального контроллера/Lobastov.mbs",
+		"/D/HProjects/TimeLapse/firmware/stand-alone/os/hal/boards/MSDB_STM32F103C8T6/board.h",
+		"/D/HProjects/TimeLapse/firmware/android/2.6.7/boards/MSDB_STM32F103C8T6/board.h",
+		"//192.168.0.1/папка обмена главный/КОНСТРУКТОРСКИЙ ОТДЕЛ/Проекты/КДК ''Портал-Дон-02''/Енисейское речное пароходство/206 - Теплоход ''Капитан Лобастов'' проект 428.1/Настройки/Таблица параметров КДК ''Портал-Дон-02 тх Кап Лобастов''.odt",
+		"/D/HProjects/TimeLapse/firmware/stand-alone/os/hal/boards/MSDB_STM32F103C8T6/board.mk",
+		"/D/HProjects/TimeLapse/firmware/stand-alone/os/hal/boards/MSDB_STM32F103C8T6/board.c",
+		"/D/HProjects/TimeLapse/firmware/stand-alone/timelapser/mcuconf.h",
+		"/D/HProjects/TimeLapse/firmware/android/3.0.2/timelapser/main.c",
+		"/D/Projects/TimeLapse/firmware/stand-alone/RT-STM32F103_INEMO_DISCOVERY/chconf.h",
+		"/D/Projects/TimeLapse/firmware/stand-alone/os/hal/ports/STM32/LLD/USBv1/usb_lld.h",
+		"/D/Projects/TimeLapse/firmware/stand-alone/RT-STM32F103_INEMO_DISCOVERY/halconf.h",
+		"/D/Projects/TimeLapse/firmware/stand-alone/demos/STM32/RT-STM32F103-OLIMEX_STM32_P103/Makefile",
+		"/D/Projects/TimeLapse/firmware/stand-alone/timelapser/Makefile",
+		"/D/Projects/TimeLapse/firmware/stand-alone/os/hal/boards/OLIMEX_STM32_H103/board.c",
+		"/D/Projects/TimeLapse/firmware/stand-alone/os/hal/boards/MSDB_STM32F103C8T6/board.c",
+		"/D/Projects/TimeLapse/firmware/stand-alone/demos/STM32/RT-STM32F103_INEMO_DISCOVERY/chconf.h",
+		"/D/Projects/TimeLapse/firmware/stand-alone/os/hal/boards/OLIMEX_STM32_H103/board.h",
+		"/D/Projects/TimeLapse/firmware/stand-alone/os/hal/boards/MSDB_STM32F103C8T6/board.mk",
+		"/D/Projects/TimeLapse/firmware/stand-alone/os/hal/boards/OLIMEX_STM32_H103/board.mk",
+		"/D/Projects/TimeLapse/firmware/stand-alone/timelapser/Makefile_old",
+		"/D/Projects/TimeLapse/firmware/timelapser/mcuconf.h",
+		"/D/Projects/ControllerPeripheral/soft/2.6/source/SysConfig.h",
+		"/D/Projects/ControllerCentral/soft/3.4/src/SysConfig.h",
+		"/G/http/ask/anton/index.php",
+		"/G/http/ask/anton/стиль.css",
+		"/D/Projects/TimeLapse/firmware/timelapser/main.c",
+		"/D/Projects/Steadycam/soft/EvvGC-PLUS/EvvGC-PLUS-master/Firmware/evvgc-plus/telemetry.c",
+		"/D/Projects/Steadycam/soft/EvvGC-PLUS/EvvGC-PLUS-master/Firmware/evvgc-plus/telemetry.h",
+		"/D/HProjects/TimeLapse/firmware/timelapser/chconf.h",
+		"/D/HProjects/TimeLapse/firmware/boards/MSDB_STM32F103C8T6/board.mk",
+		"/D/Projects/Timelapser/firmware/timelapser/chconf.h",
+		"/D/Projects/Timelapser/firmware/timelapser/halconf.h",
+		"/D/Projects/Steadycam/soft/EvvGC-PLUS/EvvGC-PLUS-master/Firmware/boards/EVVGC_V1.X/board.c",
+		"/D/Projects/Timelapser/firmware/boards/OLIMEX_STM32_103STK/board.h",
+		"/D/Projects/Steadycam/soft/EvvGC-PLUS/EvvGC-PLUS-master/Firmware/boards/EVVGC_V1.X/board.h",
+		"/D/Projects/Timelapser/firmware/boards/MSDB_STM32F103C8T6/board.mk",
+		"/D/Projects/Timelapser/firmware/timelapser/Makefile",
+		"/D/Projects/Timelapser/firmware/timelapser/main.c",
+		"/D/Projects/Timelapser/firmware/test/test.h",
+		"/D/Projects/Timelapser/firmware/test/test.c",
+		"/D/Projects/Timelapser/firmware/documentation.html",
+		"/D/Projects/Timelapser/firmware/test/testthd.h",
+		"/D/Projects/Timelapser/firmware/test/testthd.c",
+		"/D/Projects/daria.txt",
+		"/D/Projects/Steadycam/soft/Firmware-master/out/gyro.d",
+		"/F/Soft/!Develop/!Altium Designer 14.1.5/ReadMe.txt",
+		"/D/Projects/Steadycam/docs/laser.txt",
+		"/D/Projects/Steadycam/soft/Firmware-master/src/definitions.h",
+		"/D/Projects/Steadycam/soft/Firmware-master/src/gyro.h",
+		"/D/Projects/Steadycam/soft/Firmware-master/src/gyro.c",
+		"/D/Projects/Steadycam/soft/Firmware-master/main.sublime-project",
+		"/D/Blender/吉-bronze.svg",
+		"/D/Projects/Steadycam/soft/Firmware-master/Makefile",
+		"/C/Users/Serge.SCRED/Desktop/Desktop.html",
+		"/C/Users/Serge.SCRED/workspace/Firmware-master/Release/makefile",
+		"/C/Users/Serge.SCRED/workspace/Firmware-master/Release/Firmware-master.hex",
+		"/C/Users/Serge.SCRED/workspace/Firmware-master/.project",
+		"/D/Projects/ControllerCentral/soft/MConfig/modrtc.h",
+		"/D/Projects/ControllerCentral/soft/MConfig/modrtc.cpp",
+		"/D/Projects/ControllerCentral/soft/MConfig/mconfig.h",
+		"/D/Projects/ControllerCentral/soft/MConfig/mconfig.cpp",
+		"/C/Users/Serge.SCRED/workspace/Firmware-master/.cproject",
+		"/D/Projects/Steadycam/soft/cdt.txt"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"*.c,*.h",
+			"*.c *.h",
+			"*.c",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"motoDir",
+			"motoPos",
+			"motoState",
+			"motoSteps",
+			"MOTO_",
+			"ok",
+			"cur_loc1",
+			"loc1_expr",
+			"axis1_expr",
+			"cycle_steps",
+			"CC",
+			"GPIOC_LED",
+			"led",
+			"moto",
+			"SDC",
+			"sdc",
+			"SDCD1",
+			"sdcConnect",
+			"SDC_FS",
+			"shelltp",
+			"fs_ready",
+			"f_mount",
+			"InsertHandler",
+			"TESTSRC",
+			"prescaler",
+			"usb",
+			"mai",
+			"usbDisconnectBus",
+			"SDU1",
+			"\n/*",
+			"palClearPad",
+			"static",
+			"int",
+			"hregs",
+			"REG_",
+			"MsgSet",
+			"MsgUint16",
+			"tagMsgSet",
+			"tagMsgUint16",
+			",",
+			"tree",
+			"SD2",
+			"5",
+			"chibios_2.6.7",
+			"os",
+			" ROLL",
+			"ROLL",
+			"debugOrient",
+			"getUnitsDist",
+			"background"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"axisDirection",
+			"axisPosition",
+			"axisState",
+			"axisSteps",
+			"AXIS_",
+			"cur_axis1",
+			"axis1_expr",
+			"shots",
+			"HRG_",
+			"MsgSet",
+			"tagMsgSet",
+			"os",
+			"chibios_2.6.7",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 336.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Projects\\Steadycam\\soft\\Firmware-master\\main.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 162.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
