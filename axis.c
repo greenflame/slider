@@ -6,8 +6,13 @@
 
 #define AXIS_NUM                3
 
+<<<<<<< HEAD
 #define AXIS1_DEF_SPEED         500
 #define AXIS1_MAX_POSITION      34600
+=======
+#define AXIS1_DEF_SPEED       500
+#define AXIS1_MAX_POSITION    34600
+>>>>>>> 698f4f5ea61e846e3f064761576705499396f898
 #define AXIS1_STEPS_PER_METER   40000   // steps  [34500 steps / 862 mm = 40 per mm]
 #define AXIS1_STEPS_PER_SECOND  1000    // steps
 
@@ -15,6 +20,9 @@
 #define AXIS_STATE_RUN          1
 
 #define PRE_FREQ                1000000
+
+
+
 
 
 
