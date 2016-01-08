@@ -26,7 +26,7 @@ static void cmd_check(BaseSequentialStream *chp, int argc, char *argv[]) {
   }
 
   // scripts_execute(argv[0], chp);
-  scripts_check(argv[0], chp);
+  scriptsCheck(argv[0], chp);
 }
 
 static void cmd_execute(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -37,7 +37,7 @@ static void cmd_execute(BaseSequentialStream *chp, int argc, char *argv[]) {
   }
 
   // scripts_execute(argv[0], chp);
-  scripts_execute(argv[0], chp);
+  scriptsExecute(argv[0], chp);
 }
 
 

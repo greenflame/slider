@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"DEFAULT_",
+				"DEFAULT_STAB_TIME"
+			],
+			[
 				"g",
 				"getElementById"
 			],
@@ -408,7 +412,7 @@
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -426,6 +430,18 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"TICKS_PER_SECOND",
+			"axis1_move_time",
+			"cur_axis1",
+			"prev_axis1",
+			"axis1_expr",
+			"parse_mult",
+			"parse_primitive_value",
+			"scripts_execute",
+			"scripts_check",
+			"solve_expr",
+			"parse_group",
+			"parse_add",
 			"motoDir",
 			"motoPos",
 			"motoState",
@@ -483,6 +499,18 @@
 		"regex": false,
 		"replace_history":
 		[
+			"CH_CFG_ST_FREQUENCY",
+			"axis0_move_time",
+			"cur_axis0",
+			"prev_axis0",
+			"axis0_expr",
+			"parseMult",
+			"parsePrimitiveValue",
+			"scriptsExecute",
+			"scriptsCheck",
+			"solveExpr",
+			"parseGroup",
+			"parseAdd",
 			"axisDirection",
 			"axisPosition",
 			"axisState",
@@ -506,7 +534,7 @@
 	},
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -546,7 +574,7 @@
 	"pinned_build_system": "",
 	"replace":
 	{
-		"height": 70.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

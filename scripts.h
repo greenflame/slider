@@ -3,7 +3,7 @@
 
 #include "ch.h"
 
-int scripts_check(char *script, BaseSequentialStream *out);
-int scripts_execute(char *script, BaseSequentialStream *out);
+int scriptsCheck(char *script, BaseSequentialStream *out);
+int scriptsExecute(char *script, BaseSequentialStream *out);
 
 #endif

@@ -21,6 +21,9 @@ static int axisPosition[AXIS_NUM]; // текущее положение в ша�
 static int axisDestPos[AXIS_NUM]; // в метрах
 static int axisDirection[AXIS_NUM];
 
+
+void axisMove(int axis, int steps);
+
 /*
  * Прерывание таймера TIM4
  */
