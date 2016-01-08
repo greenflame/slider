@@ -71,7 +71,7 @@ static void cmd_pos(BaseSequentialStream *chp, int argc, char *argv[]) {
     chprintf(chp, "Usage: pos <pos>\r\n");
     return;
   }
-  axisSetDestinationPos(AXIS0, atoi(argv[0])/1000);
+  axisSetDestinationPos(AXIS0, atof(argv[0]));
 }
 
 static void cmd_speed(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -80,7 +80,7 @@ static void cmd_speed(BaseSequentialStream *chp, int argc, char *argv[]) {
     chprintf(chp, "Usage: speed <speed>\r\n");
     return;
   }
-  axisSetSpeed(AXIS0, atoi(argv[0])/1000);
+  axisSetSpeed(AXIS0, atof(argv[0]));
 }
 
 static void cmd_stop(BaseSequentialStream *chp, int argc, char *argv[]) {
@@ -99,9 +99,10 @@ static void cmd_stat(BaseSequentialStream *chp, int argc, char *argv[]) {
     chprintf(chp, "Usage: stat\r\n");
     return;
   }
-  chprintf(chp, "State: %d Pos: %d\r\n",
+  chprintf(chp, "State: %d Pos: %d Enable: %d\r\n",
     axisGetState(AXIS0),
-    axisGetCurrentPos(AXIS0));
+    axisGetCurrentPos(AXIS0),
+    axisGetEnable(AXIS0));
 }
 
 
@@ -111,7 +112,7 @@ static void cmd_on(BaseSequentialStream *chp, int argc, char *argv[]) {
     chprintf(chp, "Usage: on\r\n");
     return;
   }
-  axisSetEnable(AXIS0, 1);
+  axisSetEnable(AXIS0, AXIS_ENABLE);
   chprintf(chp, "Power on\r\n");
 }
 
@@ -121,7 +122,7 @@ static void cmd_off(BaseSequentialStream *chp, int argc, char *argv[]) {
     chprintf(chp, "Usage: off\r\n");
     return;
   }
-  axisSetEnable(AXIS0, 0);
+  axisSetEnable(AXIS0, AXIS_DISABLE);
   chprintf(chp, "Power off\r\n");
 }
 

@@ -1,8 +1,8 @@
-
 #include "ch.h"
 #include "hal.h"
 #include "axis.h"
 
+#include <math.h>
 
 
 #define AXIS0_MAX_POSITION      34600
@@ -105,7 +105,7 @@ void axisSetEnable(int axis, int enable)
 {
   switch(axis) {
   case AXIS0:
-    if(enable) {
+    if(enable == AXIS_ENABLE) {
       palClearPad(GPIOB, GPIOB_MA_EN);
     } else {
       palSetPad(GPIOB, GPIOB_MA_EN);
@@ -119,7 +119,8 @@ int axisGetEnable(int axis)
 {
   switch(axis) {
   case AXIS0:
-    return !palReadPad(GPIOB, GPIOB_MA_EN);
+    // return (!palReadPad(GPIOB, GPIOB_MA_EN)) & 1;
+    return palReadLatch(GPIOB);
 
   default:
     return 0;
@@ -145,7 +146,8 @@ float axisGetSpeed(int axis)
   switch(axis) {
   case AXIS0:
     return TIMER_PRE_FREQ / TIM4->ARR / AXIS0_STEPS_PER_METER;
-    break;
+  default:
+    return 0;
   }
 }
 
@@ -253,7 +255,7 @@ float axisGetMotionTime(int axis, float posFrom, float posTo)
 {
   switch(axis) {
   case AXIS0:
-    return fabs(posFrom - posTo) * AXIS0_STEPS_PER_METER / AXIS0_STEPS_PER_METER;
+    return fabs(posFrom - posTo) * AXIS0_STEPS_PER_METER / AXIS0_STEPS_PER_SECOND;
 
   default:
     return 0;

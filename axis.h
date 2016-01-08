@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#define AXIS_NUM                3
+#define AXIS_NUM                1
 
 #define AXIS0                   0
 #define AXIS1                   1
@@ -12,6 +12,9 @@ extern "C" {
 
 #define AXIS_STATE_STOP         0
 #define AXIS_STATE_RUN          1
+
+#define AXIS_ENABLE             1
+#define AXIS_DISABLE            0
 
 #define AXIS_INVALID           -1
 

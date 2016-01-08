@@ -14,11 +14,10 @@
 #include "axis.h"
 #include "camera.h"
 
-#define SLEEP_INTERVAL          10      // ticks
-#define AXIS_COUNT              2
-#define COORDINATES_COUNT       (AXIS_COUNT + 1)
-#define SCRIPT_MAX_LENGTH       128
-#define SPLITTERS               "[;]"
+#define SLEEP_INTERVAL      10      // ticks
+#define COORDINATES_COUNT   (AXIS_NUM + 1)
+#define SCRIPT_MAX_LENGTH   128
+#define SPLIT_TOKENS        "[;]"
 
 /*
  * For recursion
@@ -42,8 +41,8 @@ int solveSteps(char *script)    // check
 {
     char scriptCpy[128];
     strcpy(scriptCpy, script);
-    
-    return atoi(strtok(scriptCpy, SPLITTERS));
+
+    return atoi(strtok(scriptCpy, SPLIT_TOKENS));
 }
 
 /*
@@ -53,40 +52,16 @@ void solveCoordinates(char *script, int step, float *coordinates, int coordinate
 {
     char scriptCpy[128];
     strcpy(scriptCpy, script);
-    
-    strtok(scriptCpy, SPLITTERS);   // Ignore steps count
-    
-    for (int i = 0; i < coordinatesCount; i++)
+
+    strtok(scriptCpy, SPLIT_TOKENS);   // Ignore steps count
+
+    int i;
+    for (i = 0; i < coordinatesCount; i++)
     {
-        char *curCoordinate = strtok(NULL, SPLITTERS);
+        char *curCoordinate = strtok(NULL, SPLIT_TOKENS);
         coordinates[i] = solveExpr(curCoordinate, step);
     }
 }
-
-// int main()
-// {
-//     printf("hello!\n");
-    
-//     char script[128];
-//     gets(script);
-    
-//     int steps = solveSteps(script);
-//     printf("%d\n", steps);
-    
-//     for (int i = 0; i < steps; i++)
-//     {
-//         float coordinates[COORDINATES_COUNT];
-//         solveCoordinates(script, i, coordinates, COORDINATES_COUNT);
-//         for (int j = 0; j < COORDINATES_COUNT; j++)
-//         {
-//             if (j) printf(" ");
-//             printf("%f", coordinates[j]);
-//         }
-//         printf("\n");
-//     }
-    
-//     return 0;
-// }
 
 /*
  * Print float as int
@@ -109,35 +84,36 @@ int scriptsCheck(char *script, BaseSequentialStream *out)
     for (i = 1; i < shots; i++)
     {
         // Calculating coordinates
-        float *prevCoordinates[COORDINATES_COUNT];
-        float *curCoordinates[COORDINATES_COUNT];
-        
+        float prevCoordinates[COORDINATES_COUNT];
+        float curCoordinates[COORDINATES_COUNT];
+
         solveCoordinates(script, i - 1, prevCoordinates, COORDINATES_COUNT);
         solveCoordinates(script, i, curCoordinates, COORDINATES_COUNT);
 
         // Calculating max motion time
         float maxMotionTime = 0;
         int slowestAxis = -1;
-        for (int j = 0; j < AXIS_COUNT; j++)
+        int j;
+        for (j = 0; j < AXIS_NUM; j++)
         {
-            float curAxisMotionTime = axisGetMotionTime(j, prevCoordinates[j + 1], curCoordinate[j + 1]);
-                
+            float curAxisMotionTime = axisGetMotionTime(j, prevCoordinates[j + 1], curCoordinates[j + 1]);
+
             if (curAxisMotionTime > maxMotionTime)
             {
-                maxMotionTime = max(maxMotionTime, curAxisMotionTime);
+                maxMotionTime = curAxisMotionTime;
                 slowestAxis = j;
             }
         }
 
         // Check time correctness
-        if (cur_time - prevTime < maxMotionTime + cameraGetExposure() + cameraGetStabilizationTime())
+        if (curCoordinates[0] - prevCoordinates[0] < maxMotionTime + cameraGetExposure() + cameraGetStabilizationTime())
         {
             chprintf(out, "Axis %d cann't be in time at step %d.\r\n\r\n", slowestAxis, i);
 
-            chprintf(out, "Free time: %d ms\r\n", ftoi(cur_time - prevTime));
+            chprintf(out, "Free time: %d ms\r\n", ftoi(curCoordinates[0] - prevCoordinates[0]));
             chprintf(out, "Motion time: %d ms\r\n", ftoi(maxMotionTime));
             chprintf(out, "Shot time: %d ms\r\n", ftoi(cameraGetExposure()));
-            chprintf(out, "Stabilization time: %d ms\r\n", ftoi(cameraGetStabilizationTime());
+            chprintf(out, "Stabilization time: %d ms\r\n", ftoi(cameraGetStabilizationTime()));
             chprintf(out, "Time limit: %d ms\r\n", ftoi(prevCoordinates[0] - curCoordinates[0]
                 + maxMotionTime + cameraGetExposure() + cameraGetStabilizationTime()));
 
@@ -161,35 +137,35 @@ int scriptsExecute(char *script, BaseSequentialStream *out)
     }
 
     int shots = solveSteps(script);
-    systime_t start_time;
+    systime_t startTime;
 
     int i;
     for (i = 0; i < shots; i++)
     {
         // Calculating coordinates
-        float *curCoordinates[COORDINATES_COUNT];
+        float curCoordinates[COORDINATES_COUNT];
         solveCoordinates(script, i, curCoordinates, COORDINATES_COUNT);
 
         if (i)  // Not first shot
         {
-            float *prevCoordinates[COORDINATES_COUNT];
-            solveCoordinates(script, i - 1, prevCoordinates, COORDINATES_COUNT);
-            float prevTime  = prevCoordinates[0];
+            float prevTime;
+            solveCoordinates(script, i - 1, &prevTime, 1);  // Solve only time function(first)
 
             // Wait for | shot time + free time = interval - stabilization - move
-            while (chVTGetSystemTime() - start_time < (systime_t)((prevTime + cameraGetExposure()) * CH_CFG_ST_FREQUENCY))
+            while (chVTGetSystemTime() - startTime < (systime_t)((prevTime + cameraGetExposure()) * CH_CFG_ST_FREQUENCY))
             {
                 chThdSleepMilliseconds(SLEEP_INTERVAL);
             }
 
             // Move axis
-            for (int j = 0; j < AXIS_COUNT; j++)
+            int j;
+            for (j = 0; j < AXIS_NUM; j++)
             {
                 axisSetDestinationPos(j, curCoordinates[j + 1]);
             }
 
             // Wait for shot
-            while (chVTGetSystemTime() - start_time < (systime_t)(cur_time * CH_CFG_ST_FREQUENCY))
+            while (chVTGetSystemTime() - startTime < (systime_t)(curCoordinates[0] * CH_CFG_ST_FREQUENCY))
             {
                 chThdSleepMilliseconds(SLEEP_INTERVAL);
             }
@@ -197,7 +173,8 @@ int scriptsExecute(char *script, BaseSequentialStream *out)
         else    // First shot
         {
             // Move axis to start position
-            for (int j = 0; j < AXIS_COUNT; j++)
+            int j;
+            for (j = 0; j < AXIS_NUM; j++)
             {
                 axisSetDestinationPos(j, curCoordinates[j + 1]);
             }
@@ -206,8 +183,9 @@ int scriptsExecute(char *script, BaseSequentialStream *out)
             while (1)
             {
                 int isMotion = 0;
-                
-                for (int j = 0; j < AXIS_COUNT; j++)
+
+                int j;
+                for (j = 0; j < AXIS_NUM; j++)
                 {
                     if (axisGetState(j) == AXIS_STATE_RUN)
                     {
@@ -215,7 +193,7 @@ int scriptsExecute(char *script, BaseSequentialStream *out)
                         break;
                     }
                 }
-                
+
                 if (isMotion)
                 {
                     chThdSleepMilliseconds(SLEEP_INTERVAL);
@@ -227,17 +205,18 @@ int scriptsExecute(char *script, BaseSequentialStream *out)
             }
 
             // Remember start time
-            start_time = chVTGetSystemTime();
+            startTime = chVTGetSystemTime();
         }
 
         // Take shot
         cameraShoot();
 
         // Write log
-        chprintf(out, "Step: %d, time: %d", i, ftoi(cur_time));
-        for (int j = 0; j < AXIS_COUNT; j++)
+        chprintf(out, "Step: %d, time: %d", i, ftoi(curCoordinates[0]));
+        int j;
+        for (j = 0; j < AXIS_NUM; j++)
         {
-            chprintf(out, ", axis%d: %d", j, curCoordinates[j + 1]);
+            chprintf(out, ", axis%d: %d", j, ftoi(curCoordinates[j + 1]));
         }
         chprintf(out, "\r\n");
     }
