@@ -118,7 +118,7 @@ CSRC = $(STARTUPSRC) \
        $(FATFSSRC) \
        $(CHIBIOS)/os/hal/lib/streams/chprintf.c \
        $(CHIBIOS)/os/various/shell.c \
-       main.c moto.c scripts.c camera.c
+       main.c axis.c scripts.c camera.c
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.

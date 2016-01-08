@@ -11,7 +11,7 @@
 #include "evtimer.h"
 #include "ff.h"
 
-#include "moto.h"
+#include "axis.h"
 #include "camera.h"
 
 // todo get moto speed, scale
